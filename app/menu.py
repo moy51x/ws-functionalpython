@@ -1,8 +1,9 @@
 # Code to show the main menu
 
-
-def greet():
-    print("Hi! " + __name__)
-
-if __name__=="__main__":
-    greet()
+def creaMenu():
+    menu=["1.- Descarga Top Artistas", 
+            "2.- Descarga Top Canciones", 
+            "3.- Ordenar por nombre",
+            "4.- Ordenar por ranking", 
+            "5.- Mostrar datos"]
+    return menu
