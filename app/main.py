@@ -1,4 +1,4 @@
-# Code to start the app
+# Code to start the app and show the menu
 from .menu import creaMenu
 
 def main():

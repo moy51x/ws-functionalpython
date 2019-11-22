@@ -1,4 +1,4 @@
-# Code to show the main menu
+# Code to generate the main menu
 
 def creaMenu():
     menu=["1.- Descarga Top Artistas", 
