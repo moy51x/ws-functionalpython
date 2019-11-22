@@ -1,7 +1,9 @@
 # Code to get remote data
+import requests
 
 def descargaDatos():
-    pass
+    print("Descargando Datos")
+
 
 def dameDatosDelJson():
-    pass
+    print("Casteando Datos")
