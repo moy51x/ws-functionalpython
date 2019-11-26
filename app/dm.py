@@ -1,17 +1,12 @@
 # Data manipulation functions
+import functools
 
 def dameDatosNecesarios(datos, campos_requeridos):
-    list_comp= [({ cr:x[cr] for cr in campos_requeridos}) for x in datos]
-    return list_comp
+    return [({ cr:x[cr] for cr in campos_requeridos}) for x in datos]
 
 
-def ordenarPorNombre():
-    raise Exception("Not implementation")
-
-
-
-def ordenarPorPosicion():
-    raise Exception("Not implementation")
+def ordenarPor(datos, dato):
+    return list(sorted(datos, key=lambda x: x[dato], reverse=False))
 
 
 def muestraLosDatos(datos):
@@ -23,3 +18,4 @@ def dameDatoFormateado(datos):
     base_str = "Nombre: {0}, Radioescuchas: {1}, URL: {2}"
     for dato in datos:
         yield base_str.format(dato["name"], dato["listeners"], dato["url"])
+
