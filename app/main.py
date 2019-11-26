@@ -17,7 +17,7 @@ def main():
             if opcion > len(menu):
                 print("Opcion invalida!")
             elif int(opcion)>=0:
-                datos = ejecutaOpcion(menu, funciones, opcion)
+                datos = ejecutaOpcion(menu, funciones, datos, opcion)
 
 
 def muestraMenu(menu):
@@ -26,9 +26,10 @@ def muestraMenu(menu):
     return input("Selecciona una opcion: ")
 
 
-def ejecutaOpcion(menu, funciones, opcion):
+def ejecutaOpcion(menu, funciones, datos, opcion):
     opcion_seleccionada = menu[opcion]
     funcion = funciones[opcion_seleccionada]
+    
     if opcion_seleccionada == menu[0]:
         datos = funcion(METHOD_TOP_ARTISTS) #Descarga Top Artistas
         datos = dameDatosNecesarios(datos, ["name", "listeners", "url"]) # Solo obtener los datos necesarios del json recibido
