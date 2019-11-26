@@ -17,7 +17,7 @@ def main():
             if opcion > len(menu):
                 print("Opcion invalida!")
             elif int(opcion)>=0:
-                datos = ejecutaOpcion(menu, funciones, datos, opcion)
+                datos = ejecutaOpcion(menu, funciones, opcion)
 
 
 def muestraMenu(menu):
@@ -26,7 +26,7 @@ def muestraMenu(menu):
     return input("Selecciona una opcion: ")
 
 
-def ejecutaOpcion(menu, funciones, datos, opcion):
+def ejecutaOpcion(menu, funciones, opcion):
     opcion_seleccionada = menu[opcion]
     funcion = funciones[opcion_seleccionada]
     if opcion_seleccionada == menu[0]:
