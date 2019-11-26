@@ -49,7 +49,7 @@ def ejecutaOpcion(menu, funciones, datos, opcion):
         datos = funcion(datos, "name")
     elif opcion_seleccionada == menu[3]:
         datos = funcion(datos, "listeners")
-        
+
     elif opcion_seleccionada == menu[4]: #Muestra los datos
         funcion(datos)
     else:
@@ -57,9 +57,6 @@ def ejecutaOpcion(menu, funciones, datos, opcion):
     
     return datos
         
-
-
-
 
 if __name__== "__main__" :
     main()
