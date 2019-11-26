@@ -34,23 +34,13 @@ def ejecutaOpcion(menu, funciones, datos, opcion):
     elif opcion_seleccionada == menu[1]:
         datos = funcion(METHOD_TOP_TRACKS) #Descarga Top Tracks
         #print(datos)
-    elif opcion_seleccionada == menu[4]:
-        muestraLosDatos(datos)
+    elif opcion_seleccionada == menu[4]: #Muestra los datos
+        funcion(datos)
     else:
         funcion()
     
     return datos
         
-
-def muestraLosDatos(datos):
-    for cadena in dameDatoFormateado(datos):
-        print(cadena)
-
-
-def dameDatoFormateado(datos):
-    base_str = "Nombre: {0}, Radioescuchas: {1}, URL: {2}"
-    for dato in datos:
-        yield base_str.format(dato["name"], dato["listeners"], dato["url"])
 
 
 if __name__== "__main__" :
