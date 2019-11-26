@@ -1,5 +1,9 @@
 # Data manipulation functions
 
+def dameDatosNecesarios(datos, campos_requeridos):
+    list_comp= [({ cr:x[cr] for cr in campos_requeridos}) for x in datos]
+    return list_comp
+
 
 def ordenarPorNombre():
     raise Exception("Not implementation")

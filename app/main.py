@@ -1,6 +1,7 @@
 # Code to start the app and show the menu
 from .menu import creaMenu
 from .constants import METHOD_TOP_ARTISTS, METHOD_TOP_TRACKS
+from .dm import dameDatosNecesarios
 
 
 def main():
@@ -30,10 +31,10 @@ def ejecutaOpcion(menu, funciones, datos, opcion):
     funcion = funciones[opcion_seleccionada]
     if opcion_seleccionada == menu[0]:
         datos = funcion(METHOD_TOP_ARTISTS) #Descarga Top Artistas
-        #print(datos)
+        datos = dameDatosNecesarios(datos, ["name", "listeners", "url"]) # Solo obtener los datos necesarios del json recibido
     elif opcion_seleccionada == menu[1]:
         datos = funcion(METHOD_TOP_TRACKS) #Descarga Top Tracks
-        #print(datos)
+        datos = dameDatosNecesarios(datos, ["name", "listeners", "url"])
     elif opcion_seleccionada == menu[4]: #Muestra los datos
         funcion(datos)
     else:
